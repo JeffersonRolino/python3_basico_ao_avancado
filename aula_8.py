@@ -1,8 +1,10 @@
+ano = 2023
+
 nome = "João"
 sobrenome = "Silva"
-idade = 23
-ano_nascimento = 2000
-maior_de_idade = True
+idade = 25
+ano_nascimento = ano - idade
+maior_de_idade = idade >= 18
 altura_metros = 1.75
 
 print("Nome:", nome)
