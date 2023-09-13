@@ -98,7 +98,7 @@
 
 # print(len(pessoa_2))
 
-pessoa = {"nome": "Jefferson", "sobrenome": "Rolino", "idade": 45}
+# pessoa = {"nome": "Jefferson", "sobrenome": "Rolino", "idade": 45}
 
 
 # print(pessoa.keys())
@@ -117,7 +117,28 @@ pessoa = {"nome": "Jefferson", "sobrenome": "Rolino", "idade": 45}
 # for key, value in pessoa.items():
 #     print(key, value)
 
-pessoa.setdefault("idade", None)
+# pessoa.setdefault("idade", None)
 
-for key, value in pessoa.items():
-    print(key, value)
+# for key, value in pessoa.items():
+#     print(key, value)
+
+import copy
+
+d1 = {"c1": 1, "c2": 2, "l1": [0, 1, 2]}
+
+# cópia rasa / shallow copy
+d2 = d1.copy()
+
+# cópia profunda / deep copy
+d3 = copy.deepcopy(d2)
+
+d2["c1"] = 1000
+d2["c2"] = "abc"
+d2["l1"][0] = 42
+
+d3["c1"] = 78
+d3["l1"][1] = 789
+
+print(d1)
+print(d2)
+print(d3)
