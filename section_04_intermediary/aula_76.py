@@ -122,23 +122,53 @@
 # for key, value in pessoa.items():
 #     print(key, value)
 
-import copy
+# import copy
 
-d1 = {"c1": 1, "c2": 2, "l1": [0, 1, 2]}
+# d1 = {"c1": 1, "c2": 2, "l1": [0, 1, 2]}
 
-# cópia rasa / shallow copy
-d2 = d1.copy()
+# # cópia rasa / shallow copy
+# d2 = d1.copy()
 
-# cópia profunda / deep copy
-d3 = copy.deepcopy(d2)
+# # cópia profunda / deep copy
+# d3 = copy.deepcopy(d2)
 
-d2["c1"] = 1000
-d2["c2"] = "abc"
-d2["l1"][0] = 42
+# d2["c1"] = 1000
+# d2["c2"] = "abc"
+# d2["l1"][0] = 42
 
-d3["c1"] = 78
-d3["l1"][1] = 789
+# d3["c1"] = 78
+# d3["l1"][1] = 789
 
-print(d1)
-print(d2)
-print(d3)
+# print(d1)
+# print(d2)
+# print(d3)
+
+p1 = {"nome": "Luiz", "sobrenome": "Miranda"}
+
+# # Metódo Get
+# p2 = {
+#     # "nome": "Luiz",
+#     "sobrenome": "Miranda"
+# }
+
+# print(p2.get("nome", "Nome não existe"))
+
+# nome = p1.pop("nome")
+# print(nome)
+# print(p1)
+
+# ultima_chave = p1.popitem()
+# print(ultima_chave)
+# print(p1)
+
+# p1.update({"nome": "novo valor", "idade": 30})
+# print(p1)
+
+
+# p1.update(nome="novo valor", idade=30)
+# print(p1)
+
+# tupla = (("nome", "novo valor"), ("idade", 30))
+lista = [["nome", "novo valor"], ["idade", 30]]
+p1.update(lista)
+print(p1)
