@@ -51,7 +51,7 @@
 #     print(f"{key}: {pessoa[key]}")
 
 
-pessoa = {}
+# pessoa = {}
 
 ##
 ##
@@ -62,16 +62,16 @@ pessoa = {}
 
 # Chaves dinâmicas
 
-key = "nome"
-pessoa["sobrenome"] = "Miranda "
-pessoa[key] = "José"
+# key = "nome"
+# pessoa["sobrenome"] = "Miranda "
+# pessoa[key] = "José"
 
 # del pessoa["sobrenome"]
 
-print(pessoa)
+# print(pessoa)
 
-print(pessoa[key])
-print(pessoa["nome"])
+# print(pessoa[key])
+# print(pessoa["nome"])
 
 # print(pessoa["sobrenome"])
 
@@ -82,7 +82,42 @@ print(pessoa["nome"])
 # print("Esse código não será acessado devido exceção")
 
 # Usando o get
-if pessoa.get("sobrenome") is not None:
-    print(pessoa["sobrenome"])
-else:
-    print("Chave não existe")
+# if pessoa.get("sobrenome") is not None:
+#     print(pessoa["sobrenome"])
+# else:
+#     print("Chave não existe")
+
+
+# Dicionários só usam o último valor
+# pessoa_2 = {
+#     "nome": "Luiz Otávio",
+#     "sobrenome": "Miranda",
+#     "sobrenome": "Miranda",
+#     "sobrenome": "Miranda",
+# }
+
+# print(len(pessoa_2))
+
+pessoa = {"nome": "Jefferson", "sobrenome": "Rolino", "idade": 45}
+
+
+# print(pessoa.keys())
+# print(pessoa.values())
+# print(pessoa.items())
+
+# print(list(pessoa.keys()))
+
+# for key in pessoa.keys():
+#     print(key)
+
+
+# for value in pessoa.values():
+#     print(value)
+
+# for key, value in pessoa.items():
+#     print(key, value)
+
+pessoa.setdefault("idade", None)
+
+for key, value in pessoa.items():
+    print(key, value)
