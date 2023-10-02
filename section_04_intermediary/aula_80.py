@@ -11,6 +11,8 @@ Requisitos:
         [1, 4, 9, 8, ->9<-, 4, 8] (retorne 9)
     Se não encontrar duplicados na lista, retorne -1
 """
+import math
+
 lista_de_listas_de_inteiros = [
     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     [9, 1, 8, 9, 9, 7, 2, 1, 6, 8],
@@ -33,7 +35,7 @@ lista_de_listas_de_inteiros = [
 #             for number in lista:
 
 
-def get_first_duplicaded_number(lista):
+def get_first_duplicated_number(lista):
     index = 0
     while index < len(lista):
         number = lista[index]
@@ -47,5 +49,5 @@ def get_first_duplicaded_number(lista):
 
 
 for lista in lista_de_listas_de_inteiros:
-    duplicated_number = get_first_duplicaded_number(lista)
+    duplicated_number = get_first_duplicated_number(lista)
     print(duplicated_number)
