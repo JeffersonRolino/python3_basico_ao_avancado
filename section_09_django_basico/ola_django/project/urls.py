@@ -1,20 +1,10 @@
+from blog import views as blog_views
 from django.contrib import admin
-from django.http import HttpResponse
 from django.urls import path
-
-
-def home(request):
-    print("HOME")
-    return HttpResponse("HOME")
-
-
-def my_view(request):
-    print("BLOG")
-    return HttpResponse("BLOG")
-
+from home import views as home_views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", home),
-    path("blog/", my_view),
+    path("", home_views.home),
+    path("blog/", blog_views.blog),
 ]
