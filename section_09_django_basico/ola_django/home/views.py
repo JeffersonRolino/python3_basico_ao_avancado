@@ -5,4 +5,4 @@ from django.http import HttpResponse
 
 def home(request):
     print("HOME")
-    return HttpResponse("HOME do App")
+    return HttpResponse("HOME do App 1")
