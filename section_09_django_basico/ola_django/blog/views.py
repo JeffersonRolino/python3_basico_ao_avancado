@@ -2,8 +2,10 @@ from django.shortcuts import render
 
 
 def blog(request):
-    return render(request, "blog/index.html")
+    context = {"text": "Estamos no Blog", "title": "Blog"}
+    return render(request, "blog/index.html", context)
 
 
 def exemplo(request):
-    return render(request, "blog/exemplo.html")
+    context = {"text": "Estamos no Exemplo", "title": "Exemplo"}
+    return render(request, "blog/exemplo.html", context)
