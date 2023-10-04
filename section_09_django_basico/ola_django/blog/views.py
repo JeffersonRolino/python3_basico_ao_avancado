@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 def blog(request):
     context = {
-        "text": "Estamos no Blog",
+        # "text": "Estamos no Blog",
         "posts": posts,
     }
     return render(request, "blog/index.html", context)
