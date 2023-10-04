@@ -4,7 +4,8 @@
         <h1>{% block texto %} BASE {% endblock texto %}</h1>
 
         <main class="posts">
-            {% include "global/partials/postblock.html" %}
+            {% block posts %}{% endblock posts %}
+            {% block content %}{% endblock content %}
         </main>
 
     </body>
