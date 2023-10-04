@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post Detail</title>
-</head>
-<body>
-    <h1>Post Detail</h1>
-</body>
-</html>
+{% extends "global/base.html" %}
+
+{% block texto %} {{text}} {% endblock texto %}
+
+{% block posts %}
+    <article class="post single-post">
+        <header>
+            <h1>{{post.title}}</h1>
+        </header>
+        <div class="post__body">
+            <p>{{post.body}}</p>
+        </div>
+    </article>
+{% endblock posts %}
